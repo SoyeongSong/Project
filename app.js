@@ -14,6 +14,8 @@ router.get('/', function(req, res) {
     //__dirname : It will resolve to your project folder.
 });
 
+// index 접속
+app.use('/', router);
 
 // 스터디 파일 공유 폴더 접속 가능 경로 생성
 // 그냥 study 하위파일은 전체 경로에서 open 가능하게 설정 추후 app.js 경로 공부나 설정 해보시고 싶을때는 말씀 해주시고 수정 하시면 됩니다.
