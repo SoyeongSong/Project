@@ -21,4 +21,11 @@ app.use('/', router);
 // 그냥 study 하위파일은 전체 경로에서 open 가능하게 설정 추후 app.js 경로 공부나 설정 해보시고 싶을때는 말씀 해주시고 수정 하시면 됩니다.
 app.use('/study', express.static('study'));
 
+app.use('/project', express.static('project'));
+
+router.get('/action', function (req, res) {
+    console.log(req.query);
+    res.send('Request parameters : '+req.query.id)
+    });
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
