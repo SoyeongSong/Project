@@ -4,6 +4,7 @@ const port = 3000
 
 //app.get('/', (req, res) => res.send('Hello World!'))
 
+// Soyeongsong
 
 app.use(express.static('public'))
 
@@ -12,6 +13,11 @@ const router = express.Router();
 router.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/main.html'));
     //__dirname : It will resolve to your project folder.
+});
+
+router.get('/test', function(req, res) {
+    console.log(req.query);
+    res.send('Request parameters : ' + req.query.txtEmail + ', ' + req.query.txtPwd + ', ' + req.query.chkMe + ', '+ req.query.slcList_s + ', ' + req.query.slcList_m + '<br /><br /><a href=\'javascript:history.back();\'>back</a>')
 });
 
 // index 접속
@@ -27,13 +33,5 @@ router.get('/action', function (req, res) {
     console.log(req.query);
     res.send('Request parameters : '+req.query.id)
     });
-
-
-
-
-router.get('/test', function(req, res) {
-    console.log(req.query);
-    res.send('Request parameters : ' + req.query.txtEmail + ', ' + req.query.txtPwd + ', ' + req.query.txtEmail2)
-});
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
