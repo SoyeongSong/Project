@@ -28,4 +28,12 @@ router.get('/action', function (req, res) {
     res.send('Request parameters : '+req.query.id)
     });
 
+
+
+
+router.get('/test', function(req, res) {
+    console.log(req.query);
+    res.send('Request parameters : ' + req.query.txtEmail + ', ' + req.query.txtPwd + ', ' + req.query.txtEmail2)
+});
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))

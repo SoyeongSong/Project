@@ -21,14 +21,14 @@
     <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <a class="navbar-brand font-weight-bold" href="./index.html"><i class="fas fa-parachute-box" style='color:white'></i>  FunCon</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
-                        <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
+            <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav mr-auto font-weight-bold">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./notice.html">Notice</a>
@@ -36,22 +36,97 @@
                     <li class="nav-item">
                         <a class="nav-link" href="./logout.html">Login/out</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active font-weight-bold">
                         <a class="nav-link" href="./member_inf.html">Signup</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./ticket.html">Ticket</a>
+                    </li>
                 </ul>
+
                 <form class="form-inline">
-                    <input class="form-control" type="text" placeholder="Search">
+                    <input class="form-control-sm" type="text" placeholder="Search">
                     <button class="btn border border-light"><i class="fas fa-search" style='color:white'></i></button>
                 </form>
             </div>
         </nav>
     </header>
 
-    <div class="container">
-        <form action="/action_page" method="GET">
+    <div class="container" style="padding:50px 0">
+        <div class="card text-center">
+            <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">4</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">5</a>
+                </li>
+                </ul>
+            </div>
 
-            <div class="form-group font-weight-bold">
+
+            <div class="card-body">                
+                <h2 class="card-title">SIGN UP</h2>
+                <img src="./Images/user.jpg" style="width:150px;" />
+
+
+                <form class="form-group font-weight-bold" action="/member_inf" method="GET">
+                            <form class="form-signin"></form>
+                            <img class="mb-4" src="" alt="" width="72" height="72">
+                            <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+                            <label for="inputEmail" class="sr-only">Email address</label>
+                            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                            <label for="inputPassword" class="sr-only">Password</label>
+                            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                            <div class="checkbox mb-3">
+                                <label><input type="checkbox" value="remember-me"> Remember me</label>
+                            </div>
+                          
+                            <div class="container">
+
+                                <input type="text" placeholder="textinp"/>
+                                <input type="password" placeholder="password input"/>
+                                <input type="datetime" placeholder="datetime input"/>
+                                <input type="datetime-local" placeholder="datetime-local input"/>
+                                <input type="date" placeholder="date"/>
+                                <input type="month" placeholder="monthinput"/>
+                                <input type="time" placeholder="timeinput"/>
+                                <input type="week" placeholder="weekinput"/>
+                                <input type="number" placeholder="numberinput"/>
+                                <input type="url" placeholder="urlinput"/>
+                                <input type="search" placeholder="searchinput"/>
+                                <input type="tel" placeholder="telinput"/>
+                            </div>
+                            <button type="submit" class="btn btn-md btn-primary px-5">Done</button>
+                        </form>
+                        <br>
+                        <br>
+                  <p class="card-text text-muted">Please check the contents again.</p>                 
+                </div>
+            </div>
+    
+    </div>
+
+
+        
+        <!-- <div class="row d-flex justify-content-center" style="width:300px; text-align: center">
+                <div class="px-3 py-5" style="height: 350px">
+                            <img src="/user.jpg" style="width:100px; height: 100px;">
+                            <p class="py-3">SIGN UP</p>
+                </div>
+        </div> -->
+    
+            <!-- <div class="form-group font-weight-bold">
                 <label for="txtEmail">Email : </label>
                 <input type="email" id="txtEmail" name="txtEmail" class="form-control" placeholder="Enter email">
             </div>
@@ -143,8 +218,8 @@
 
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
-    </div>
+    </div> -->
 
-</body>
+    </body>
 
 </html>

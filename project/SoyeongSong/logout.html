@@ -18,30 +18,35 @@
 
 <body>
     <!-- HEADER NAVI-->
+
     <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <a class="navbar-brand font-weight-bold" href="./index.html"><i class="fas fa-parachute-box" style='color:white'></i>  FunCon</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
-                        <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
+            <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav mr-auto font-weight-bold">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./notice.html">Notice</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active font-weight-bold">
                         <a class="nav-link" href="./logout.html">Login/out</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./member_inf.html">Signup</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./ticket.html">Ticket</a>
+                    </li>
                 </ul>
+
                 <form class="form-inline">
-                    <input class="form-control" type="text" placeholder="Search">
+                    <input class="form-control-sm" type="text" placeholder="Search">
                     <button class="btn border border-light"><i class="fas fa-search" style='color:white'></i></button>
                 </form>
             </div>
@@ -49,7 +54,7 @@
     </header>
 
 
-    <div class="container">
+    <div class="container" style="padding:50px 0;">
         <form class="form-group font-weight-bold">
             <form class="form-signin"></form>
             <img class="mb-4" src="" alt="" width="72" height="72">
@@ -66,7 +71,8 @@
             <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
             <p class="mt-5 mb-3 text-muted">&copy; Since 2019 Corporation @...</p>
         </form>
-
+    </div>
+<!-- 
         <div class="form-group font-weight-bold">
             <label for="txtEmail">Email : </label>
             <input type="email" id="txtEmail" name="txtEmail" class="form-control" placeholder="Enter email">
@@ -85,7 +91,7 @@
                 </label>
             </div>
         </div>
-    </div>
+    </div> -->
 
 
 

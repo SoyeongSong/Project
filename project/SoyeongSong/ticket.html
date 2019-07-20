@@ -21,17 +21,17 @@
     <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <a class="navbar-brand font-weight-bold" href="./index.html"><i class="fas fa-parachute-box" style='color:white'></i>  FunCon</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
-                        <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
+            <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav mr-auto font-weight-bold">
-                    <li class="nav-item">
-                        <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="./notice.html">Notice</a>
+                        <a class="nav-link" href="./notice.html">Notice</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./logout.html">Login/out</a>
@@ -39,7 +39,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="./member_inf.html">Signup</a>
                     </li>
+                    <li class="nav-item  active font-weight-bold">
+                        <a class="nav-link" href="./ticket.html">Ticket</a>
+                    </li>
                 </ul>
+
                 <form class="form-inline">
                     <input class="form-control-sm" type="text" placeholder="Search">
                     <button class="btn border border-light"><i class="fas fa-search" style='color:white'></i></button>
@@ -49,10 +53,31 @@
     </header>
 
 
-    <!--MAIN-->
+    <!--MAIN-->   
+             
     <main role="main" style="padding:50px 0;">
 
         <h1 class="text-secondary">Preparing the service.</h1>
+
+        <div class="container">
+
+                <input type="text" placeholder="textinp"/>
+                <input type="password" placeholder="password input"/>
+                <input type="datetime" placeholder="datetime input"/>
+                <input type="datetime-local" placeholder="datetime-local input"/>
+                <input type="date" placeholder="date"/>
+                <input type="month" placeholder="monthinput"/>
+                <input type="time" placeholder="timeinput"/>
+                <input type="week" placeholder="weekinput"/>
+                <input type="number" placeholder="numberinput"/>
+                <input type="url" placeholder="urlinput"/>
+                <input type="search" placeholder="searchinput"/>
+                <input type="tel" placeholder="telinput"/>
+         
+            <button type="submit" class="btn btn-md btn-primary px-5">Submit</button>
+
+        </div>
+        </form>
        
     </Main>
 
