@@ -4,7 +4,7 @@ const port = 3000
 
 //app.get('/', (req, res) => res.send('Hello World!'))
 
-// Soyeongsong
+.
 
 app.use(express.static('public'))
 
@@ -14,6 +14,8 @@ router.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/main.html'));
     //__dirname : It will resolve to your project folder.
 });
+
+//SoyeongSong
 
 router.get('/test', function(req, res) {
     console.log(req.query);
