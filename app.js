@@ -4,8 +4,11 @@ const port = 3000
 
 //app.get('/', (req, res) => res.send('Hello World!'))
 
+// index 접속
+app.use('/', router);
 
 
+//공통
 app.use(express.static('public'))
 
 const path = require('path');
@@ -15,25 +18,22 @@ router.get('/', function(req, res) {
     //__dirname : It will resolve to your project folder.
 });
 
-//SoyeongSong
-
-router.get('/test', function(req, res) {
-    console.log(req.query);
-    res.send('Request parameters : ' + req.query.txtEmail + ', ' + req.query.txtPwd + ', ' + req.query.chkMe + ', '+ req.query.slcList_s + ', ' + req.query.slcList_m + '<br /><br /><a href=\'javascript:history.back();\'>back</a>')
-});
-
-// index 접속
-app.use('/', router);
-
-// 스터디 파일 공유 폴더 접속 가능 경로 생성
-// 그냥 study 하위파일은 전체 경로에서 open 가능하게 설정 추후 app.js 경로 공부나 설정 해보시고 싶을때는 말씀 해주시고 수정 하시면 됩니다.
-app.use('/study', express.static('study'));
-
 app.use('/project', express.static('project'));
 
 router.get('/action', function (req, res) {
     console.log(req.query);
     res.send('Request parameters : '+req.query.id)
     });
+
+
+//SoyeongSong
+router.get('/logout', function(req, res) {
+    console.log(req.query);
+    res.send('Request parameters : ' + req.query.txtEmail + ', ' + req.query.txtPwd + ', ' + req.query.chkMe + ', '+ req.query.slcList_s + ', ' + req.query.slcList_m + '<br /><br /><a href=\'javascript:history.back();\'>back</a>')
+});
+router.get('/member_inf', function(req, res) {
+    console.log(req.query);
+    res.send('Request parameters : ' + req.query.txtEmail + ', ' + req.query.txtPwd + ', ' + req.query.chkMe + ', '+ req.query.slcList_s + ', ' + req.query.slcList_m + '<br /><br /><a href=\'javascript:history.back();\'>back</a>')
+});
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
