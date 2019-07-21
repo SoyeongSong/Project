@@ -54,25 +54,50 @@
     </header>
 
 
-    <div class="container" style="padding:50px 0;">
-        <form class="form-group font-weight-bold">
-            <form class="form-signin"></form>
-            <img class="mb-4" src="" alt="" width="72" height="72">
-            <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-            <label for="inputEmail" class="sr-only">Email address</label>
-            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-            <label for="inputPassword" class="sr-only">Password</label>
-            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-            <div class="checkbox mb-3">
-                <label>
-                            <input type="checkbox" value="remember-me"> Remember me
+    <div class="container" style="padding:100px 0;">
+        <h2 class="text-center">SIGN UP</h2>
+        <div class="row justify-content-center">
+            
+            <img class="rounded-circle mt-3" src="/Images/user.jpg" style="width:150px;" alt="Userimg" />
+        
+        <div class="container justify-content-center">
+            <form class="form-group font-weight-bold form-signin">
+                <h2 class="h3 mt-3 font-weight-normal text-center">Please sign in</h2>
+                <label for="inputEmail" class="sr-only">Email address</label>
+                <input type="email" id="txtEmail" class="form-control" placeholder="Email address" required autofocus>
+                <label for="inputPassword" class="sr-only">Password</label>
+                <input type="password" id="txtPwd" class="form-control" placeholder="Password" required>
+                <div class="checkbox m-3">
+                    <label>
+                        <input type="checkbox" value="remember-me" id="chkMe"> Remember me
                     </label>
+                </div>
+                <button class="btn btn-lg btn-primary px-5 py-1" type="submit" data-toggle="modal" data-target="#modal">Login</button>
+            </form>
+        </div>
+
+        <div class="modal fade" id="modal"> 
+            <div class="modal-dialog modal-dialog-centered">    
+                <div class="modal-content">        
+                    <div class="modal-header"> 
+                        <h4 class="modal-title">Warning</h4>   
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body"> Sorry, You cannot enter yet. </div> 
+                    <div class="modal-footer">
+                        <button type="button" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
             </div>
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
-            <p class="mt-5 mb-3 text-muted">&copy; Since 2019 Corporation @...</p>
-        </form>
-    </div>
+        </div> 
+     
+
+                
+                
+                
+
 <!-- 
+        
         <div class="form-group font-weight-bold">
             <label for="txtEmail">Email : </label>
             <input type="email" id="txtEmail" name="txtEmail" class="form-control" placeholder="Enter email">
@@ -94,6 +119,14 @@
     </div> -->
 
 
+
+
+
+    <!-- FOOTER -->
+    <footer class="container">
+            <hr class="featurette-divider">
+            <p class="text-center text-secondary"><small>&copy; 1990-2019 FUNCON Company, FUNNY CONCERT Inc. TEL : 123-4567</small></p>
+    </footer>
 
 </body>
 
