@@ -29,11 +29,11 @@ app.use('/project', express.static('project'));
 //Soyeong
 router.get('/logout', function(req, res) {
     console.log(req.query);
-    res.send('Request parameters : ' + req.query.txtEmail + ', ' + req.query.txtPwd + ', ' + req.query.chkMe + ', '+ req.query.slcList_s + ', ' + req.query.slcList_m + '<br /><br /><a href=\'javascript:history.back();\'>back</a>')
+    res.send('Request parameters : ' + req.query.txtEmail + ', ' + req.query.txtPwd + ', ' + req.query.chkMe + ', ' + '<br><br><a href=\'javascript:history.back();\'>BACK</a>')
 });
 router.get('/member_inf', function(req, res) {
     console.log(req.query);
-    res.send('Request parameters : ' + req.query.txtEmail + ', ' + req.query.txtPwd + ', ' + req.query.chkMe + ', '+ req.query.slcList_s + ', ' + req.query.slcList_m + '<br /><br /><a href=\'javascript:history.back();\'>back</a>')
+    res.send('Request parameters : ' + req.query.username + ', ' + req.query.email + ', ' + req.query.phone + ', '+ req.query.address + ', ' + req.query.country +', ' + req.query.gender+ '<br /><br /><a href=\'javascript:history.back();\'>back</a>')
 });
     
 
