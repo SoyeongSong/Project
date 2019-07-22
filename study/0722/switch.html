@@ -1,30 +1,39 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <script>
-            var text;
-            switch (new Date().getDay()){
-                case 4:
-                case 5:
-                    text ="Soon it is Weekend";
-                    break;
-                case 0:
-                case 6:
-                    text="It is Weekend";
-                    break;
-                default:
-                    text = "Looking forward to the Weekend";
-            }
-        </script>
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Switch</title>
+    
+  
+    <script src="./firstscript.js"></script>
 
-    <body>
-        
-        <p id="demo"></p>
-        <script>
-            document.getElementById("demo").innerHTML = text;
-        </script>
 
-    </body>
+</head>
+<body>
 
+    <script>
+        var text;
+        switch (new Date().getDay()) { //0~6 호출됨
+        case 4:
+        case 5:
+        text = "Soon it is Weekend";
+        break;
+        case 0:
+        case 6:
+        text = "It is Weekend";
+        break;
+        default:
+        text = "Looking forward to the Weekend";
+        }
+    </script>
+
+
+
+    <p id="demo"></p>
+    <script>
+    document.getElementById("demo").innerHTML = text;
+    </script>
+   
+
+</body>
 </html>
