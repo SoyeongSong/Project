@@ -1,0 +1,48 @@
+
+
+<html>
+        <head>
+          
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    
+        <title>string02</title>
+            
+        </head>
+    
+        <body>
+        
+            <script>
+            var str = "Please locate where 'locate' occurs!";
+            var str02 = "Good!";
+            var concat = str02.concat(" ", str);
+            var str03 = " Hello World! ";
+            var trim = str03.trim();
+            var splitcommas = "a,b, c,|d, e";
+            var splitspaces = "a,b, c,|d, e";
+            var splitsign = "a,b, c,|d, e";
+            var splintcommas = splitcommas.split(",");
+            var splitspaces = splitspaces.split(" "); 
+            var splitsign = splitsign.split("|");
+            </script>
+
+            txt.concat : <span id="demo05"></span><br>
+            txt.trim : <span id="demo06"></span><br>
+            txt.commas : <span id="demo07"></span><br>
+            txt.spaces : <span id="demo08"></span><br>
+            txt.splitsign : <span id="demo09"></span><br>
+
+            <script>
+            document.getElementById("demo05").innerHTML = concat;
+            document.getElementById("demo06").innerHTML = trim;
+            document.getElementById("demo07").innerHTML = splitcommas[0];
+            document.getElementById("demo08").innerHTML = splitspaces[1];
+            document.getElementById("demo09").innerHTML = splitsign[1];
+            </script>
+
+        </body>
+    
+    </html>
