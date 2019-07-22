@@ -24,9 +24,9 @@
             var splitcommas = "a,b, c,|d, e";
             var splitspaces = "a,b, c,|d, e";
             var splitsign = "a,b, c,|d, e";
-            var splintcommas = splitcommas.split(",");
-            var splitspaces = splitspaces.split(" "); 
-            var splitsign = splitsign.split("|");
+            var commas = splitcommas.split(",");
+            var spaces = splitspaces.split(" "); 
+            var sign = splitsign.split("|");
             </script>
 
             txt.concat : <span id="demo05"></span><br>
@@ -38,9 +38,9 @@
             <script>
             document.getElementById("demo05").innerHTML = concat;
             document.getElementById("demo06").innerHTML = trim;
-            document.getElementById("demo07").innerHTML = splitcommas[0];
-            document.getElementById("demo08").innerHTML = splitspaces[1];
-            document.getElementById("demo09").innerHTML = splitsign[1];
+            document.getElementById("demo07").innerHTML = commas[0];
+            document.getElementById("demo08").innerHTML = spaces[1];
+            document.getElementById("demo09").innerHTML = sign[1];
             </script>
 
         </body>

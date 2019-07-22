@@ -1,0 +1,129 @@
+
+
+<html>
+        <head>
+          
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    
+        <title>stringmethod</title>
+            
+        </head>
+    
+        <body>
+        
+            <script>
+            var str00 = "Hi, my name is Sam!";
+            var str01 = 'JavaScript Program to illustrate split() function';
+            var str02 = '10, 20, 30, 40, 50';
+
+            var splintcommas=str00.split(",");
+
+            // var pos01 = str00.indexOf("1");
+            // var splitspaces = "a,b, c,|d, e"; 
+           
+            // var str01 = str02.concat(" ", str);
+            // var str03 = " Hello World! ";
+            // var trim = str03.trim();
+            // var splitcommas = "a,b, c,|d, e";
+            // var splitspaces = "a,b, c,|d, e";
+            // var splitsign = "a,b, c,|d, e";
+            // var splintcommas = splitcommas.split(",");
+            // var splitspaces = splitspaces.split(" "); 
+            // var splitsign = splitsign.split("|");
+            </script>
+ 
+            출력 : <span id="demo01"></span><br>
+            출력 : <span id="demo02"></span><br>
+            출력 : <span id="demo03"></span><br>
+            출력 : <span id="demo04"></span><br>
+            출력 : <span id="demo05"></span><br>
+            출력 : <span id="demo06"></span><br>
+            출력 : <span id="demo07"></span><br>
+            출력 : <span id="demo08"></span><br>
+            출력 : <span id="demo09"></span><br>
+            출력 : <span id="demo10"></span><br>
+            출력 : <span id="demo11"></span><br>
+            출력 : <span id="demo12"></span><br>
+            출력 : <span id="demo13"></span><br>
+            출력 : <span id="demo14"></span><br>
+            출력 : <span id="demo15"></span><br>
+            출력 : <span id="demo16"></span><br>
+
+           
+
+            <script>
+            document.getElementById("demo01").innerHTML = splitcommas[0];
+            document.getElementById("demo02").innerHTML = splitcommas[1];
+            document.getElementById("demo03").innerHTML = splitcommas[0];
+            document.getElementById("demo04").innerHTML = splitspaces[1];
+            document.getElementById("demo05").innerHTML = splitsign[1];
+
+            document.getElementById("demo06").innerHTML = concat;
+            document.getElementById("demo07").innerHTML = trim;
+            document.getElementById("demo08").innerHTML = splitcommas[0];
+            document.getElementById("demo09").innerHTML = splitspaces[1];
+            document.getElementById("demo10").innerHTML = splitsign[1];
+            document.getElementById("demo11").innerHTML = splitsign[1];
+
+            document.getElementById("demo12").innerHTML = concat;
+            document.getElementById("demo13").innerHTML = trim;
+            document.getElementById("demo14").innerHTML = splitcommas[0];
+            document.getElementById("demo15").innerHTML = splitspaces[1];
+            document.getElementById("demo16").innerHTML = splitsign[1];
+
+
+
+
+                //참고해서 수정하기... 아 하기싫다
+
+    //         var sentence="Hi, my name is Sam!";
+    //         var part01=sentence.substring(0,3);
+    //         var part02=sentence.substring(4,19);
+    //         var part03=part01.concat(' ',sentence.substring(15,19));
+    //         var part04=sentence.substring(sentence.indexOf("name"),sentence.indexOf("name")+4);
+    //         var part05=sentence.substring(sentence.indexOf("Sam"),sentence.indexOf("Sam")+3);
+            
+    //         var sentence="Hi, my name is Sam!";
+    //         var part01=sentence.substring(0,3);
+    //         var part02=sentence.substring(4,19);
+    //         var part03=part01.concat(' ',sentence.substring(15,19));
+    //         var part04=sentence.substring(sentence.indexOf("name"),sentence.indexOf("name")+4);
+    //         var part05=sentence.substring(sentence.indexOf("Sam"),sentence.indexOf("Sam")+3);
+            
+    //         <script>
+    //     var str0 = "Hi, my name is Sam!";
+        
+    //     var Hi = str0.substring(str0.indexOf("Hi,"),str0.lastIndexOf("Hi,") + "Hi,".length);
+    //     var My = str0.substring(str0.indexOf("my name is Sam!"),str0.lastIndexOf("my name is Sam!") + "my name is Sam!".length);
+    //     var Sam = str0.substring(str0.indexOf("Sam"),str0.lastIndexOf("Sam") + "Sam".length);
+    //     var Sam1 = str0.substring(str0.indexOf("Sam!"),str0.lastIndexOf("Sam!") + "Sam!".length);
+    //     var Name = str0.substring(str0.indexOf("name"),str0.lastIndexOf("name") + "name".length);
+    //     var Hisam = Hi.concat(" ", Sam1);
+    // </script>
+<!--     
+    // 출력 : <span id="demo"></span><br>
+    // 출력 : <span id="demo1"></span><br>
+    // 출력 : <span id="demo2"></span><br>
+    // 출력 : <span id="demo3"></span><br>
+    // 출력 : <span id="demo4"></span><br>
+
+    // <script> -->
+    //     document.getElementById("demo").innerHTML = Hi;
+    //     document.getElementById("demo1").innerHTML = My;
+    //     document.getElementById("demo2").innerHTML = Hisam;
+    //     document.getElementById("demo3").innerHTML = Name;
+    //     document.getElementById("demo4").innerHTML = Sam1;
+    // </script>
+           
+           
+
+           
+           </script>
+
+        </body>
+    
+    </html>
