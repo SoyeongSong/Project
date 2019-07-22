@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>string</title>
+    
+  
+    <script src="./firstscript.js"></script>
+
+
+</head>
+<body>
+    <script>
+        var str0 = "Hi, my name is Sam!";
+        
+        var Hi = str0.substring(str0.indexOf("Hi,"),str0.lastIndexOf("Hi,") + "Hi,".length);
+        var My = str0.substring(str0.indexOf("my name is Sam!"),str0.lastIndexOf("my name is Sam!") + "my name is Sam!".length);
+        var Sam = str0.substring(str0.indexOf("Sam"),str0.lastIndexOf("Sam") + "Sam".length);
+        var Sam1 = str0.substring(str0.indexOf("Sam!"),str0.lastIndexOf("Sam!") + "Sam!".length);
+        var Name = str0.substring(str0.indexOf("name"),str0.lastIndexOf("name") + "name".length);
+        var Hisam = Hi.concat(" ", Sam1);
+    </script>
+    
+    출력 : <span id="demo"></span><br>
+    출력 : <span id="demo1"></span><br>
+    출력 : <span id="demo2"></span><br>
+    출력 : <span id="demo3"></span><br>
+    출력 : <span id="demo4"></span><br>
+
+    <script>
+        document.getElementById("demo").innerHTML = Hi;
+        document.getElementById("demo1").innerHTML = My;
+        document.getElementById("demo2").innerHTML = Hisam;
+        document.getElementById("demo3").innerHTML = Name;
+        document.getElementById("demo4").innerHTML = Sam1;
+    </script>
+    <br><br>
+
+    <script>
+        var Java = str1.split(" ");
+        var program = str1.split(" ");
+    </script>
+    
+    출력 : <span id="demo5"></span><br>
+    출력 : <span id="demo6"></span><br>
+
+    <script>
+        document.getElementById("demo5").innerHTML = Java[0];
+        document.getElementById("demo6").innerHTML = Java[1];
+    </script>
+    <br><br>
+
+    <script>
+            var num = '10, 20, 30, 40, 50';
+            var numsplit = num.split(",");
+        </script>
+        
+        출력 : <span id="demo7"></span><br>
+        출력 : <span id="demo8"></span><br>
+        출력 : <span id="demo9"></span><br>
+        출력 : <span id="demo10"></span><br>
+        출력 : <span id="demo11"></span><br>
+    
+        <script>
+            document.getElementById("demo7").innerHTML = numsplit[0];
+            document.getElementById("demo8").innerHTML = numsplit[1];
+            document.getElementById("demo9").innerHTML = numsplit[2];
+            document.getElementById("demo10").innerHTML = numsplit[3];
+            document.getElementById("demo11").innerHTML = numsplit[4];
+        </script>
+
+
+</body>
+</html>
