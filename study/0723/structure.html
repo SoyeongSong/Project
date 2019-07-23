@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+
+    </title>
+    <script src="./firstscript.js"></script>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <script>
+        function myFunction(p1, p2) {
+            return p1 * p2;
+        }
+        document.getElementById("demo").innerHTML = myFunction(4, 3);
+    </script>
+    <script>
+        function toCelsius(fahrenheit) {
+            return (5 / 9) * (fahrenheit - 32);
+        }
+    </script>
+    <p id="demo1"></p>
+    <script>
+        document.getElementById("demo1").innerHTML = toCelsius(77) + " Celsius";
+    </script>
+
+</body>
+
+</html>

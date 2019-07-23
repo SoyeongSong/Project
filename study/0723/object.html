@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+
+    </title>
+</head>
+
+<body>
+    <p id="demo01"></p>
+    <script>
+        var person01 = { firstName: "John", lastName: "Doe", age: 50, eyeColor: "blue" }
+        var x = person01.constructor(); x.age = 10; // typeof person01 명령어 시도
+        var person02 = { // → var person02 = new Object(); 가능
+            firstName: "John", lastName: "Doe", // → person.firstName = "John"; 가능
+            fullName: function (firstVal, secondVal) {
+                return this.firstName + " " + firstVal + " " + secondVal;
+            }
+        }; // for (x in person02) { txt += person02[x]; } 시도
+        document.getElementById("demo01").innerHTML =
+
+            person01.firstName + " is " + person01.age + " years old.";
+
+        person02.nationality = "Korean"; // "demo02" 화면 출력 시도
+        document.getElementById("demo02").innerHTML = person02.nationality;
+        delete person01.age; // "demo03" 화면 출력 시도
+        document.getElementById("demo03").innerHTML = person01.age;
+        
+        document.getElementById("demo04").innerHTML = person02.fullName("Jane", "Valet");
+
+    </script>
+
+</body>
+
+</html>

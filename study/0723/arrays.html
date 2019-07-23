@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+
+    </title>
+</head>
+
+<body>
+    <script>
+        var fruits, text, fLen, i;
+        fruits = ["Banana", "Orange", "Apple", "Mango"]; // 초기화
+        fLen = fruits.length; // 배열 갯수
+        fruits.sort(); // → 주석 후 시도
+        text = "<ul>";
+        for(var fruit of fruits){ // literal 시도
+        text += "<li>" + fruit + "</li>";
+        }
+        text += "</ul>";
+    </script>
+    <p id="demo01"></p> ...
+    <script>
+        document.getElementById("demo01").innerHTML = text;
+        document.getElementById("demo02").innerHTML = fruits.pop(); // ‘Orange’삭제
+        var strPush = fruits.push("Kiwi"); // 끝에 ‘Kiwi’ 붙임
+        document.getElementById("demo03").innerHTML = fruits;
+        var arraySplice = fruits.splice(0, 2); // ‘Apple’, ‘Banana’ Drop
+        document.getElementById("demo04").innerHTML = fruits;
+    </script>
+</body>
+
+
+</html>
