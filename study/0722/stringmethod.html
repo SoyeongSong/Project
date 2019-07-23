@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        
+        <script src="./firstscript.js"></script>
+        <title>stringmethod</title>
+            
+    </head>
+    
+        <body>
+        
+            <script>
+            var str00 = "Hi, my name is Sam!";
+            var str01 = 'JavaScript Program to illustrate split() function';
+            var str02 = '10, 20, 30, 40, 50';
+
+            var pos00=str00.substring(0,3);
+            var pos01=str00.substring(3);
+            var pos02=pos00+str00.substring(14);
+            var pos03=str00.substring(str00.indexOf("name"),str00.indexOf("name")+"name".length);
+            var pos04=str00.substr(str00.indexOf("Sam"),"Sam".length);
+
+            var pos05=str01.split(" ");
+
+            var str02=str02.trim();
+            var pos06=str02.split(",");
+            </script>
+ 
+            출력 : <span id="demo00"></span><br>
+            출력 : <span id="demo01"></span><br>
+            출력 : <span id="demo02"></span><br>
+            출력 : <span id="demo03"></span><br>
+            출력 : <span id="demo04"></span><br><br>
+            출력 : <span id="demo05"></span><br>
+            출력 : <span id="demo06"></span><br>
+            출력 : <span id="demo07"></span><br>
+            출력 : <span id="demo08"></span><br>
+            출력 : <span id="demo09"></span><br>
+            출력 : <span id="demo10"></span><br><br>
+            출력 : <span id="demo11"></span><br>
+            출력 : <span id="demo12"></span><br>
+            출력 : <span id="demo13"></span><br>
+            출력 : <span id="demo14"></span><br>
+            출력 : <span id="demo15"></span><br>
+           
+
+           
+
+            <script>
+            document.getElementById("demo00").innerHTML = pos00;
+            document.getElementById("demo01").innerHTML = pos01;
+            document.getElementById("demo02").innerHTML = pos02;
+            document.getElementById("demo03").innerHTML = pos03;
+            document.getElementById("demo04").innerHTML = pos04;
+
+            document.getElementById("demo05").innerHTML = pos05[0];
+            document.getElementById("demo06").innerHTML = pos05[1];
+            document.getElementById("demo07").innerHTML = pos05[2];
+            document.getElementById("demo08").innerHTML = pos05[3];
+            document.getElementById("demo09").innerHTML = pos05[4];
+            document.getElementById("demo10").innerHTML = pos05[5];
+
+
+            document.getElementById("demo11").innerHTML = pos06[0];
+            document.getElementById("demo12").innerHTML = pos06[1];
+            document.getElementById("demo13").innerHTML = pos06[2];
+            document.getElementById("demo14").innerHTML = pos06[3];
+            document.getElementById("demo15").innerHTML = pos06[4];
+            </script>
+  
+        </body>
+    
+    </html>
