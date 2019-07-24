@@ -16,23 +16,119 @@
 </head>
 
 <body>
-    <p id="demo"></p>
-    <p id="demo01"></p>
+    <div class="container border-radius-3 bg-light p-5">
+        <form name="myform" onsubmit="return compare()">
+            <div class="row">
+                <div class="col-6">
+                    <span>Compare1</span>
+                    <input type="text" class="form-control" name="com1"></div>
+                <div class="col-6">
+                    <span>Compare2</span>
+                    <input type="text" class="form-control" name="com2"></div>
+            </div><br>
+            <button class="btn btn-primary" type="submit">Compare</button>
+        </form><br>
+        <div class="row ml-2">
+            Result :<p class="form-control ml-2" style="width:90%" id="compare"></p>
+        </div>
+    </div>
     <script>
-        var person = {
-            fullName: function (city, country) {
-                return this.firstName + " " + this.lastName + "," + city + "," + country;
+        function compare() {
+            var com1 = document.myform.com1.value;
+            var com2 = document.myform.com2.value;
+            var val = true;
+
+            if (com1 < com2) {
+                document.getElementById("compare").innerHTML = com2;
+                return false;
             }
+            else {
+                document.getElementById("compare").innerHTML = com1;
+                return false;
+            }
+            return val;
         }
-        var person1 = {
-            firstName: "John", lastName: "Doe"
+    </script>
+
+    <div class="container border-radius-3 bg-light p-5">
+        <form name="myform1" onsubmit="return getstr()">
+            <div class="row">
+                <div class="col-6">
+                    <span>Main string</span>
+                    <input type="text" class="form-control" name="mainstr"></div>
+                <div class="col-6">
+                    <span>Target stirng</span>
+                    <input type="text" class="form-control" name="target"></div>
+            </div><br>
+            <button class="btn btn-primary" type="submit">Result</button>
+
+        </form><br>
+        <div class="row ml-2">
+                Result :<p class="form-control ml-2" style="width:90%" id="result"></p>
+            </div>
+            <div class="row ml-2">
+                    Result :<p class="form-control ml-2" style="width:90%" id="result2"></p>
+                </div>
+    </div>
+
+    <script>
+        function getstr() {
+            var mainstr = document.myform1.mainstr.value;
+            var target = document.myform1.target.value;
+            var resultstr = mainstr.split(target);
+            var resulttarget = mainstr.substring(mainstr.indexOf(target), mainstr.indexOf(target) + target.length);
+            var val = true;
+
+            document.getElementById("result").innerHTML = resultstr[0];
+            document.getElementById("result2").innerHTML = resulttarget;
+            return false;
         }
-        var x = person.fullName.call(person1, "Oslo", "Norway");
-        document.getElementById("demo").innerHTML = x;
-        var living = function (city, country) {
-            return city + "," + country;
+
+
+    </script>
+
+
+
+    <div class="container border-radius-3 bg-light p-5">
+        <form name="myform2" onsubmit="return changestr()">
+            <span>Main string</span>
+            <input type="text" class="form-control" name="mainstr">
+
+            <div class="row">
+                <div class="col-6">
+                    <span>Target string</span>
+                    <input type="text" class="form-control" name="targetstr"></div>
+                <div class="col-6">
+                    <span>Replace stirng</span>
+                    <input type="text" class="form-control" name="replacestr"></div>
+            </div><br>
+
+            <button class="btn btn-primary" type="submit">Result</button>
+
+        </form><br>
+        <div class="row ml-2">
+            Result :<p class="form-control ml-2" style="width:90%" id="result3"></p>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        function changestr() {
+            var mainstr = document.myform2.mainstr.value;
+            var target = document.myform2.targetstr.value;
+            var replace = document.myform2.replacestr.value;
+            var val = true;
+            var temp = "empty"
+
+            var resultstr = mainstr.replace(target,temp);                
+                resultstr = resultstr.replace(replace,target);
+                resultstr = resultstr.replace(temp,replace);
+
+            document.getElementById("result3").innerHTML = resultstr;
+            return false;
         }
-        document.getElementById("demo01").innerHTML = living('Korea', 'Pangyo');
+
+
     </script>
 </body>
 
