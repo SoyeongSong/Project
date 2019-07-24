@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        
+        <script src="./firstscript.js"></script>
+        <title>Object</title>
+            
+    </head>
+    
+    <body>
+
+            <p id="demo01"></p>
+            <p id="demo02"></p>
+            <p id="demo03"></p>
+            <script>
+            var person01 = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"}
+            var x = person01.constructor();
+            x.age = 10; // typeof person01 명령어 시도
+
+            var person02 = new Object();
+            var person02 = {
+             firstName: "John", lastName : "Doe", 
+             fullName : function(firstVal,secondVal) {
+             return this.firstName + " " + firstVal + " " + secondVal;
+             }
+            }; 
+
+          
+            
+            
+            // for (x in person02){
+            //     txt+= person02[x];
+            // }
+                
+            document.getElementById("demo01").innerHTML =
+            person01.firstName + " is " + person01.age + " years old.";
+       
+
+
+            person02.nationality = "Korean"; 
+            document.getElementById("demo02").innerHTML =
+            person02.fullName("Jane","Valet") + "is" + person02.nationality;
+            
+            
+            delete person01.age; // "demo03" 화면 출력 시도
+            document.getElementById("demo01").innerHTML =
+            person01.firstName + " is " + person01.age + " years old."; //undifined로 출력
+
+
+
+
+            </script>
+    </body>
+    
+    </html>
