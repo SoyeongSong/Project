@@ -17,7 +17,7 @@
 
 <body>
     <div class="container border-radius-3 bg-light p-5">
-        <form name="myform" onsubmit="return compare()">
+        <form name="myform" onsubmit="return str_control(this)">
             <div class="row">
                 <div class="col-6">
                     <span>Compare1</span>
@@ -32,26 +32,9 @@
             Result :<p class="form-control ml-2" style="width:90%" id="compare"></p>
         </div>
     </div>
-    <script>
-        function compare() {
-            var com1 = document.myform.com1.value;
-            var com2 = document.myform.com2.value;
-            var val = true;
-
-            if (com1 < com2) {
-                document.getElementById("compare").innerHTML = com2;
-                return false;
-            }
-            else {
-                document.getElementById("compare").innerHTML = com1;
-                return false;
-            }
-            return val;
-        }
-    </script>
 
     <div class="container border-radius-3 bg-light p-5">
-        <form name="myform1" onsubmit="return getstr()">
+        <form name="myform1" onsubmit="return str_control(this)">
             <div class="row">
                 <div class="col-6">
                     <span>Main string</span>
@@ -64,33 +47,15 @@
 
         </form><br>
         <div class="row ml-2">
-                Result :<p class="form-control ml-2" style="width:90%" id="result"></p>
-            </div>
-            <div class="row ml-2">
-                    Result :<p class="form-control ml-2" style="width:90%" id="result2"></p>
-                </div>
+            Result :<p class="form-control ml-2" style="width:90%" id="result"></p>
+        </div>
+        <div class="row ml-2">
+            Result :<p class="form-control ml-2" style="width:90%" id="result2"></p>
+        </div>
     </div>
 
-    <script>
-        function getstr() {
-            var mainstr = document.myform1.mainstr.value;
-            var target = document.myform1.target.value;
-            var resultstr = mainstr.split(target);
-            var resulttarget = mainstr.substring(mainstr.indexOf(target), mainstr.indexOf(target) + target.length);
-            var val = true;
-
-            document.getElementById("result").innerHTML = resultstr[0];
-            document.getElementById("result2").innerHTML = resulttarget;
-            return false;
-        }
-
-
-    </script>
-
-
-
     <div class="container border-radius-3 bg-light p-5">
-        <form name="myform2" onsubmit="return changestr()">
+        <form name="myform2" onsubmit="return str_control(this)">
             <span>Main string</span>
             <input type="text" class="form-control" name="mainstr">
 
@@ -110,26 +75,54 @@
             Result :<p class="form-control ml-2" style="width:90%" id="result3"></p>
         </div>
     </div>
-    </div>
+
 
     <script>
-        function changestr() {
-            var mainstr = document.myform2.mainstr.value;
-            var target = document.myform2.targetstr.value;
-            var replace = document.myform2.replacestr.value;
-            var val = true;
-            var temp = "empty"
+        function str_control(param) {
+            if (param.name == "myform") {
+                var com1 = this.myform.com1;
+                var com2 = this.myform.com2;
+                var val = true;
 
-            var resultstr = mainstr.replace(target,temp);                
-                resultstr = resultstr.replace(replace,target);
-                resultstr = resultstr.replace(temp,replace);
+                if (com1 < com2) {
+                    document.getElementById("compare").innerHTML = this.myform.com2.value;
+                    return false;
+                }
+                else {
+                    document.getElementById("compare").innerHTML = this.myform.com1.value;
+                    return false;
+                }
+                return val;
+            }
+            else if (param.name == "myform1") {
+                var mainstr = this.myform1.mainstr.value;
+                var target = this.myform1.target.value;
+                var resultstr = mainstr.split(target);
+                var resulttarget = mainstr.substring(mainstr.indexOf(target), mainstr.indexOf(target) + target.length);
+                var val = true;
 
-            document.getElementById("result3").innerHTML = resultstr;
-            return false;
+                document.getElementById("result").innerHTML = resultstr[0];
+                document.getElementById("result2").innerHTML = resulttarget;
+                return false;
+            }
+            else if (param.name == "myform2") {
+                var mainstr = this.myform2.mainstr.value;
+                var target = this.myform2.targetstr.value;
+                var replace = this.myform2.replacestr.value;
+                var val = true;
+                var temp = "empty"
+
+                var resultstr = mainstr.replace(target, temp);
+                resultstr = resultstr.replace(replace, target);
+                resultstr = resultstr.replace(temp, replace);
+
+                document.getElementById("result3").innerHTML = resultstr;
+                return false;
+            }
         }
 
-
     </script>
+
 </body>
 
 
