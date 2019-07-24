@@ -16,13 +16,46 @@
     
     <body>
 
+
+
+        <!-- //output -->
+        <form>
+            <div class="container">
+                <div class="row justify-content-around">
+                    <div class="form-group col-md-6">
+                    <label for="select01">대분류 : </label>
+                    <select class="form-control" id="select01" name="select01" onchange="categorize()">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                    <label for="select02">중분류 : </label>
+                    <select class="form-control" id="select02" name="select02" onchange="categorize()">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                    </div>
+                </div>
+            </div>
+        </form>
+
         <script>
-            function validateform() {
-                // var name = document.myform.name.value;
-                // var password = document.myform.password.value;
-            }
-                
+        function categorize() {
+            var A = document.getElementById("select01").selectedIndex;
+            var B = document.getElementById("select02");
+            var result = B.options[A].selected ='1';
+            return result;
+        }
         </script>
+
+
+
 
         <!-- //onsubmit 이용한 입력 오류표시 -->
         <form onsubmit="return validateform()">
@@ -31,6 +64,7 @@
                     <label for="validation01">First name</label>
                     <input type="text" class="form-control is-valid" id="validation01" placeholder="First name" value="Soyeong" required>
                     <div class="valid-feedback"> Looks good!</div>
+                    <div class="invalid-feedback"> input name </div>
                 </div>
                 <div class="col-md-4 mb-3">
                     <label for="validation02">Last name</label>
@@ -71,10 +105,175 @@
                     </div>
                 </div>
             </div>
-            <button class="btn btn-primary rounded-3 text-uppercase font-weight-bold" type="submit">submit form</button>
+            <button class="btn btn-primary rounded-pill text-uppercase font-weight-bold" type="submit">submit form</button>
 
         </form>
-        
+<!-- 
+        //나중에 참고해서 수정할 것
+
+
+        <form name="testForm" action="/login" onsubmit="return inputFunction()" class="row">
+            <div class="form-group col-lg-4">
+                <input class="form-control" id="first_name" name="first_name" type="text" placeholder="First name">
+                <p id="event1"></p>
+            </div>
+
+            <div class="form-group col-lg-4">
+                <input class="form-control" id="last_name" name="last_name" type="text" placeholder="Last name">
+                <p id="event2"></p>
+            </div>
+
+            <div class="form-group col-lg-4">
+                <input class="form-control" id="username" name="username" type="text" placeholder="Username">
+                <p id="event3"></p>
+            </div>
+
+            <div class="form-group col-lg-6">
+                <input class="form-control" id="city" name="city" type="text" placeholder="City">
+                <p id="event4"></p>
+            </div>
+
+            <div class="form-group col-lg-3">
+                <input class="form-control" id="state" name="state" type="text" placeholder="State">
+                <p id="event5"></p>
+            </div>
+
+            <div class="form-group col-lg-3">
+                <input class="form-control" id="zip" name="zip" type="text" placeholder="Zip">
+                <p id="event6"></p>
+            </div>
+            <div class="form-group form-check col-lg-12">
+                <input name="check" type="checkbox" class="form-check-input" id="check1">
+                <label class="form-check-label" for="exampleCheck1">Agree to terms and conditions</label>
+                <p id="submitt"></p>
+            </div>
+
+
+            <button type="submit" class="btn btn-primary text-white rounded-pill">SUBMIT FORM</button>
+        </form>
+
+
+        <script>
+
+            function inputFunction() {
+                    var check_return = true;
+                    var ment;
+                    var f_name = document.testForm.first_name.value;
+                    var l_name = document.testForm.last_name.value;
+                    var u_name = document.testForm.username.value;
+                    var city = document.testForm.city.value;
+                    var state = document.testForm.city.value;
+                    var zip = document.testForm.zip.value;
+                    var check = document.testForm.check1.checked;
+                    var last_name = document.getElementById("last_name");
+                    var first_name = document.getElementById("first_name");
+                    var username = document.getElementById("username");
+                    var city_id = document.getElementById("city");
+                    var state_id = document.getElementById("state");
+                    var zip_id = document.getElementById("zip");
+                    var check1 = document.getElementById("check1");
+                    if (f_name == null || f_name == "") {
+                        ment = "Please choose a first name";
+                        document.getElementById("event1").innerHTML = ment;
+                        first_name.classList.add("is-Invalid");
+                           
+                    }
+                    else{
+                        
+                            first_name.classList.remove("is-Invalid");
+                            first_name.classList.add("is-valid");
+                            document.getElementById("event1").classList.add("text-success");
+                            document.getElementById("event1").innerHTML = "Looks good!"
+                        
+                    }
+                    
+    
+                    if (l_name == null || l_name == "") {
+                            ment = "Please choose a last name";
+                            document.getElementById("event2").innerHTML = ment;
+                            last_name.classList.add("is-Invalid");
+                            check_return = false;
+    
+                            
+                    }
+                    else{
+                        
+                            last_name.classList.remove("is-Invalid");
+                            last_name.classList.add("is-valid");
+                            document.getElementById("event2").classList.add("text-success");
+                            document.getElementById("event2").innerHTML = "Looks good!"
+                        
+                    }
+    
+                    if (u_name == null || u_name == "") {
+                                ment = "Please choose a username";
+                                document.getElementById("event3").innerHTML = ment;
+                                username.classList.add("is-Invalid");
+                                check_return = false;
+                    }
+                    else{
+                        
+                            username.classList.remove("is-Invalid");
+                            username.classList.add("is-valid");
+                        
+                    }
+    
+                    if (city == null || city == "") {
+                                ment = "Please provide a valid city";
+                                document.getElementById("event4").innerHTML = ment;
+                                city_id.classList.add("is-Invalid");
+                                check_return = false;
+                    }
+                    else{
+                        
+                            city_id.classList.remove("is-Invalid");
+                            city_id.classList.add("is-valid");
+                        
+                    }
+    
+                    if (state == null || state == "") {
+                                ment = "Please provide a valid state";
+                                document.getElementById("event5").innerHTML = ment;
+                                state_id.classList.add("is-Invalid");
+                                check_return = false;
+                    }
+                    else{
+                            state_id.classList.remove("is-Invalid");
+                            state_id.classList.add("is-valid");
+                        
+                    }
+    
+                    if (zip == null || zip == "") {
+                                ment = "Please provide a valid zip";
+                                document.getElementById("event6").innerHTML = ment;
+                                zip_id.classList.add("is-Invalid");
+                                check_return = false;
+                    }
+                    else{
+                        
+                            zip_id.classList.remove("is-Invalid");
+                            zip_id.classList.add("is-valid");
+                        
+                    }
+    
+                    if(check == false){
+                        ment = "You must agree before submitting";
+                        document.getElementById("submitt").innerHTML = ment;
+                    }
+                    else{
+                            zip_id.classList.remove("is-Invalid");
+                            zip_id.classList.add("is-valid");
+                        
+                    }
+    
+    
+                   
+                    
+                    return check_return;   
+                       
+                }
+        </script>
+         -->
     </body>
     
     </html>
