@@ -18,56 +18,64 @@
 
 <body>
     <script>
+        var list = new Array;
         function addlist() {
-            var value = document.select.list.value;
-            document.getElementById("demo").innerHTML = value;
+            var sel = document.getElementById('sel');
+            var opt = sel.options[sel.selectedIndex].text;
+            list.push(opt);
+            for (var i = 0; i < list.length; i++) {
+                document.getElementById("demo").innerHTML = list[i];
+            }
         }
     </script>
 
     <div class="container">
         <div class="row">
-            <p>대분류</p>
-            <select name="select" class="col-3 form-control" multiple>
-                <option name="list" value="1" onclick="addlist()">1</option>
-                <option name="list" value="2" onclick="addlist()">2</option>
-                <option name="list" value="3" onclick="addlist()">3</option>
-            </select>
-
-            <div class="row">
-                <p>소분류</p>
-                <div class="col-6">
-                    <div class="px-2">
-                        <textarea type="text" class="form-control" style="height:100px;" id="demo"></textarea>
-                    </div>
+            <div class="col-6 ">
+                <p>대분류: </p>
+                <select id="sel" class="form-control" multiple>
+                    <option value="1" onclick="addlist()">1</option>
+                    <option value="2" onclick="addlist()">2</option>
+                    <option value="3" onclick="addlist()">3</option>
+                </select>
+            </div>
+            <div class="col-6">
+                <p>소분류: </p>
+                <div class="px-2">
+                    <textarea type="text" class="form-control" style="height:100px;" id="demo"></textarea>
                 </div>
             </div>
         </div>
+
+
         <br><br>
 
 
-        <form class="container needs-validation" novalidate>
+        <form class="container needs-validation" novalidate name="myform" action="/action"
+            onsubmit="return validateform()">
+
             <div class="form-row">
                 <div class="col-md-4 mb-3">
                     <label for="validationCustom01">First name</label>
-                    <input type="text" class="form-control" id="validationCustom01" placeholder="First name" required>
-                    <div class="valid-feedback">
-                        Looks good!
+                    <input type="text" name="fname" class="form-control" id="validationCustom01"
+                        placeholder="First name" required>
+                    <div class="invalid-feedback" id="fndiv">
                     </div>
                 </div>
                 <div class="col-md-4 mb-3">
                     <label for="validationCustom02">Last name</label>
-                    <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" required>
-                    <div class="valid-feedback">
-                        Looks good!
+                    <input type="text" name="lname" class="form-control" id="validationCustom02" placeholder="Last name"
+                        required>
+                    <div class="invalid-feedback" id="lndiv">
                     </div>
                 </div>
                 <div class="col-md-4 mb-3">
                     <label for="validationCustomUsername">Username</label>
                     <div class="input-group">
-                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username"
-                            aria-describedby="inputGroupPrepend" required>
-                        <div class="invalid-feedback">
-                            Please choose a username.
+                        <input type="text" name="usern" class="form-control" id="validationCustomUsername"
+                            placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                        <div class="invalid-feedback" id="userdiv">
+                            Please provide a username.
                         </div>
                     </div>
                 </div>
@@ -128,6 +136,34 @@
                     });
                 }, false);
             })();
+
+
+            function validateform() {
+                var fname = document.myform.fname.value;
+                var lname = document.myform.lname.value;
+                var usern = document.myform.usern.value;
+                var value = false;
+
+                if (fname == null || fname == "") {
+                    var strvalidation = "First name can't be blank";
+                    document.getElementById("fndiv").innerHTML = strvalidation;
+
+
+                    if (lname == null || lname == "") {
+                        var strvalidation = "Last name can't be blank";
+                        document.getElementById("lndiv").innerHTML = strvalidation;
+
+                        if (usern == null || usern == "") {
+                            var strvalidation = "Username must be longer than 3 word";
+                            document.getElementById("userndiv").innerHTML = strvalidation;
+                            return false;
+                        }
+                        return false;
+                    }
+                    return false;
+                }
+                return value;
+            }
         </script>
     </div>
 </body>
