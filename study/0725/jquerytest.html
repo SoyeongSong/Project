@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+   
+    
+    <!-- <script src="http://code.jquery.com/jquery-latest.min.js"></script> -->
+    <title>Jquery test</title>
+
+  
+</head>
+
+<body>
+<!-- 
+    <script>
+    function popUp(){
+        alert("You entered h1!")
+    }
+
+    $(function(){
+        $("#h1").hover(popUp());
+    });
+    </script>
+    <h1 id="h1">This is a paragraph.</h1> -->
+
+
+    <!-- <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("p").hide();
+            });
+        });
+    </script>
+
+    <p>This is a paragraph.</p>
+    <button>Click me</button> -->
+<!-- 
+
+
+    <script>
+        $().ready(function () {
+        $("input").focus(); $(":focus").css("background-color", "yellow");
+        $(":empty").css("background-color", "yellow");
+        $(":checkbox").wrap("<span style='background-color:red'>");
+        });
+    </script>
+        
+      
+
+    <script>
+    $(function(){
+        $("input").focus(function(){
+        $(this).css("background-color", "grey"); });
+        $("input").blur(function(){ // focus 후 표시
+        $(this).css("background-color", "green"); });
+    });
+    </script>
+
+
+     Name: <input type="text" name="fullname"><br>
+ -->
+<!-- 
+    <script>
+    $(function(){
+        $("H3, P").on({
+            mouseenter:function(){
+                $(this).css("background-color", "lightgray");
+            },
+            mouseleave:function(){
+                $(this).css("background-color", "lightblue");
+            },
+            click:function(){
+                $(this).css("background-color", "yellow");
+            }
+        });
+    });
+    </script>
+    <H3>Click or move the mouse pointer over this paragraph</H3>
+    <P>Click or move the mouse pointer over this paragraph</P>
+ -->
+
+<!-- 
+    <div class="container">
+        <p id="msg-keyup"></p>
+        <p id="msg-keydown"></p>
+        <input type="text" id="textbox">
+        <p id="msg"></p>
+    </div>
+
+    <script>
+        $(document).on('keypress',function(event){
+            if(event.which==13){
+                alert('You pressed enter!');
+            }
+        });
+
+        $().ready(function(){
+            $('#textbox').keyup(function(event){
+                $('#msg-keyup').html('keyup() is triggered!, keyCode = '+event.keyCode)
+            });
+            $('#textbox').keydown(function(event){
+                $('#msg-keydown').html('keydown() is triggered!, keyCode = '+event.keyCode)
+            });
+        });
+    </script> -->
+<!-- 
+    <script>
+        $().ready(function(){
+            $("button").click(function(){
+                $("p").hide("slow", function(){
+                    alert("Example with Callback");
+                });
+            });
+            $("h1").click(function(){
+                $("p").show(1000);
+                alert("Example without Callback");
+            });
+        });
+    </script>
+
+    <button>Hide</button>
+    <p>This is a paragraph with little content</p>
+    <h1>Here Click</h1> -->
+
+
+    <!-- <script>
+    $(function(){
+    $("button").click(function(){
+    $("#div1").fadeOut();
+    $("#div2").fadeOut("slow");
+    $("#div3").fadeOut(3000);
+    });
+    });
+    </script> -->
+
+    <script>
+    $(function(){
+        $("button").click(function(){
+            $("#div1").fadeToggle();
+            $("#div2").fadeToggle("slow");
+            $("#div3").fadeToggle(3000);
+
+        });
+    });
+    </script>
+
+    <div class="container m-3 p-3 border">
+        <button class="btn-block btn-primary text-white">Click to fade out boxes</button><br>
+        <div class="row justify-content-between">
+        <div id="div1" style="width:100px;height:100px;background-color:lightcoral;"></div><br>
+        <div id="div2" style="width:100px;height:100px;background-color:lightskyblue;"></div><br>
+        <div id="div3" style="width:100px;height:100px;background-color:lightseagreen;"></div>
+        </div>
+    </div>
+
+
+
+</body>
+</html>
