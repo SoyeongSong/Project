@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+    <script>
+        function function1(param) {
+            prefunction(param.name, "second", callbackfunction);
+        };
+
+        function prefunction(param02, paramsecond02, callback01) {
+            console.log(param02);
+            if (typeof callback01 == 'function') {
+                callback01(param02, paramsecond02);
+            }
+        }
+        function callbackfunction(param01, paramsecond01) {
+            console.log(param01 + ', ' + paramsecond01);
+            console.log("callback Call");
+        }
+
+        $(function () {
+            $("button").click(function () {
+                $("p").html('Name is ' + this.name)
+            });
+        });
+    </script>
+
+<div class="container p-3">
+    <button class="btn-primary" id="button1" name="button1">Button1</button>
+    <button class="btn-primary" id="button2" name="button2">Button2</button><br>
+    <p class="p-3"></p>
+</div>
+</body>
+
+
+</html>
