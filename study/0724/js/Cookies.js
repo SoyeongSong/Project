@@ -2,7 +2,8 @@
 function setCookie(form) {
     var d = new Date();
     var expires = "expires=" + d.toGMTString();
-    document.cookie = txtEmail.value + "=" + txtPassword.value + ";" + expires + ";path=/";
+    document.cookie = txtEmail.value + "=" + txtPwd.value + ";" + expires + ";path=/";
+    document.cookie = chkMe.id + "=" + chkMe.checked + ";" + expires + ";path=/";
     alert(document.cookie);
 }
 
