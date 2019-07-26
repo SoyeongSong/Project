@@ -18,6 +18,9 @@ $(function () {
     $("#gcity").click(function () {
         $("#result").html($("#city").val());
     });
+    $("#gall").click(function () {
+        $("#result").html("attrName : " + $("#name").attr("name") + "<br>" + "attrComments : " + $("#comments").attr("name") + "<br>" + "attrCity : " + $("#city").attr("name"));
+    });
 
     $("#togglebtn").click(function () {
         var checked = $(":checkbox:checked").length;

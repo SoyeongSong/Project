@@ -32,12 +32,12 @@
     </div>
 
     <div class="container py-3">
-        <span class="h5 mr-1">Name:</span><input class="mx-5" id="name" type="text"><br>
+        <span class="h5 mr-1">Name:</span><input class="mx-5" id="name" name="name" type="text"><br>
         <div class="row">
             <span class="h5 my-5">Comments:</span>
-            <textarea class="mx-4 my-2" style="height: 100px" id="comments" type="text"></textarea><br>
+            <textarea class="mx-4 my-2" style="height: 100px" id="comments" name="name" type="text"></textarea><br>
         </div>
-        <span class="h5 mr-4">City:</span><select class="mx-5 select" id="city">
+        <span class="h5 mr-4">City:</span><select class="mx-5 select" id="city" name="city">
             <option selected>Choose...</option>
             <option value="Paris">Paris</option>
             <option value="Seoul">Seoul</option>
@@ -52,6 +52,7 @@
         <button id="gname" class="btn btn-muted border border-muted">Get Name</button>
         <button id="gcomm" class="btn btn-muted border border-muted">Get Comment</button>
         <button id="gcity" class="btn btn-muted border border-muted">Get City</button>
+        <button id="gall" class="btn btn-muted border border-muted">Get All Name</button>
     </div>
 
 
