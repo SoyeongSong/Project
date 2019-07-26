@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="/js/content.js"></script>
+</head>
+
+
+<body>
+    <script>
+    </script>
+
+
+    <div class="container bg-light py-3">
+        <button id="btn1" class="btn btn-muted border border-muted">Discovery</button>
+        <button id="btn2" class="btn btn-muted border border-muted">Atlantis</button>
+        <button id="btn3" class="btn btn-muted border border-muted">Endeavour</button>
+
+        <p class="h5 my-3" id="str"><span style="font-weight:bold">Note:</span> Click the above buttons to set the value
+            of
+            following input box. </p>
+        <input class="my-3 form-control" type="text" id="bval">
+    </div>
+
+    <div class="container py-3">
+        <span class="h5 mr-1">Name:</span><input class="mx-5" id="name" type="text"><br>
+        <div class="row">
+            <span class="h5 my-5">Comments:</span>
+            <textarea class="mx-4 my-2" style="height: 100px" id="comments" type="text"></textarea><br>
+        </div>
+        <span class="h5 mr-4">City:</span><select class="mx-5 select" id="city">
+            <option selected>Choose...</option>
+            <option value="Paris">Paris</option>
+            <option value="Seoul">Seoul</option>
+            <option value="Roma">Roma</option>
+        </select>
+        <p class="h5 mt-3"><span style="font-weight:bold">Note:</span>Fill the above form and click the following button
+            to get the value.
+        </p><br>
+        <span class="h5 row"><span style="font-weight:bold">Result:</span>
+            <div class="mx-3" id="result"></div>
+        </span><br>
+        <button id="gname" class="btn btn-muted border border-muted">Get Name</button>
+        <button id="gcomm" class="btn btn-muted border border-muted">Get Comment</button>
+        <button id="gcity" class="btn btn-muted border border-muted">Get City</button>
+    </div>
+
+
+
+    <div class="container bg-light py-3">
+        <div class="h5">
+            <input id="ck1" type="checkbox" class="mx-3 btn btn-muted border border-muted">Arduino<br>
+            <input id="ck2" type="checkbox" class="mx-3 btn btn-muted border border-muted">Android<br>
+            <input id="ck3" type="checkbox" class="mx-3 btn btn-muted border border-muted">AI<br>
+            <input id="ck4" type="checkbox" class="mx-3 btn btn-muted border border-muted">Big Data<br>
+        </div>
+        <button id="togglebtn" class="my-2 btn btn-muted border border-muted">All Check Toggle</button>
+    </div>
+</body>
+
+
+</html>
