@@ -22,16 +22,16 @@
                 });
             });
             $("#btnset1").click(function() {
-                $('#sentence1').text("");
+                $('#sentence1').empty();
                 });
 
             $("#btnset2").click(function() {
-                $('#sentence2').show( $('#sentence1').text());
-                
+                $('#sentence2').show($('#sentence1').html());
                 });
             $("#btnset3").click(function() {
-                $("#sentence2").html($("#sentence1").html() + $("#sentence2").html());
-                });
+                $("#sentence2").append($('#sentence1').html());
+            });
+
             $("#getName").click(function() {
                 $("#get1").text("Name : " + $("#name").text());
             });
