@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+</head>
+
+<body>
+<!-- 
+    하다말았음!!! -->
+
+    <script>
+    $(document).ready(function(){
+        $("#start").click(function(){
+            $("#panel").slideDown(5000);
+            });
+        $("#stop").click(function(){ $("#panel").stop(); });
+    });
+    </script>
+    <style>
+    #start { padding: 5px; font-size: 18px;
+    text-align: center; font-weight:bold; background-color: lightcoral;
+    color: black; border: solid 1px gray; border-radius: 3px;
+    }
+    #stop { padding: 5px; font-size: 18px;
+    text-align: center; font-weight:bold; background-color: lightblue;
+    color: black; border: solid 1px gray; border-radius: 3px;
+    }
+    #panel {display: none;}
+    #nametag { padding : 5px; width:100%; color:black; text-align: center; border:solid 1px gray; border-radius: 3px;}
+
+    </style>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4" id="nametag" style="background-color: green">
+                <H3>Image 01</H3>
+            </div>
+            <div class="col-md-4" id="nametag" style="background-color: blue">
+                <H3>Image 02</H3>
+            </div>
+            <div class="col-md-4" id="nametag" style="background-color: red">
+                <H3>Image 03</H3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4" id="panel">
+                <img class="w-100" src="./img/ChicagoIllinois.jpg">
+                <p>Add a description of the image here</p>
+            </div>
+            <div class="col-md-4" id="panel">
+                <img class="w-100" src="./img/ItalyPiedmont.jpg">
+                <p>Add a description of the image here</p>
+            </div>
+            <div class="col-md-4" id="panel">
+                <img class="w-100" src="./img/SpainValencia.jpg">
+                <p>Add a description of the image here</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="container">
+            <button id="start">Start sliding</button>
+            <button id="stop">Stop sliding</button>
+    </footer>
+
+</body>
+</html>
