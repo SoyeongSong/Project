@@ -15,9 +15,13 @@ router.get('/detail', function (req, res) {
     console.log(req.query.email);
     res.send('Request parameters : ' + req.query.email)
 });
-router.get('/action', function (req, res) {
+router.get('/login', function (req, res) {
     console.log(req.query);
-    res.send('Request parameters : ' + req.query.name + ',' + req.query.pwd)
+    res.send('Request parameters : ' + req.query.txtId + ',' + req.query.txtPwd)
+});
+router.get('/join', function (req, res) {
+    console.log(req.query);
+    res.send('Request parameters : ' + req.query.username + ',' + req.query.password1)
 });
 
 app.use('/', router);

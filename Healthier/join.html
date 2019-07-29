@@ -12,6 +12,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="./js/Healthier_js.js"></script>
 
     <title>회원가입</title>
 </head>
@@ -30,7 +31,7 @@
             </div>
 
 
-            <form action="/join" method="GET" onsubmit="return joinChk(this)">
+            <form action="/join" method="GET" onsubmit="javascript:return joinChk(this)">
 
                 <div class="row justify-content-center">
                     <div class="col-md-8 order-md-3">
@@ -42,6 +43,7 @@
 
     본인은 개인정보 보호법 제15조에 의거하여 본인의 개인정보를 제공할 것을 동의합니다.
     
+    (개인정보 수집 안내)
     ○ 개인정보의 수집의 목적
         - 본인 확인절차
         - 고지사항 전달, 불만 처리 등을 위한 원활한 의사소통 경로의 확보, 채용결과
@@ -149,10 +151,19 @@
 
 
     <!--FOOTER-->
-    <footer class="container">
+    <footer class="container mt-5">
             <hr class="featurette-divider">
-            <p class="text-center text-secondary">회사 이름 및 안내 넣기</p>
-    </footer>
-
-    </body>
+            <div class="row justify-content-right">
+                <div class="col-sm-3">
+                    <img src="./Image/Logo.jpg" style="width:100px; height:100px; float:right">
+                </div>
+                <div class="col-sm-6">
+                    <p class="text-secondary">
+                    (주)건강을 추구하는 사람들 (대표이사 : 김병관, 백성훈) <br>
+                    주소 : 경기도 성남시 분당구 삼평동 629 공공지원센터 3층 <br>
+                    사업자등록번호 : 123-123-12345 신고번호 : 제 2010 경기 분당 02066호 <br>
+                    </p>
+                </div>
+            </div>
+     </footer>
 </html>
