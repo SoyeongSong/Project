@@ -19,7 +19,7 @@
 
 <body class="bg-light">
   
-    <!-- CARD TEXT -->
+    <!-- BODY TEXT -->
           
         
         <div class="container">
@@ -30,13 +30,34 @@
             </div>
 
 
-            <form action="/join" method="GET">   
+            <form action="/join" method="GET" onsubmit="return joinCheck(this)">
+
                 <div class="row justify-content-center">
                     <div class="col-md-8 order-md-3">
                         <h4 class="mb-3">SIGN UP</h4>
                         <div class="mb-3">
                             <label for="agree"> 개인정보동의서</label>
-                            <input type="text" class="form-control" id="agree" name="agree" placeholder="">
+                            <textarea class="form-control" id="agree" name="agree" name="agree" rows="10" cols="100">
+    개인정보 제공 및 활용 동의서
+
+    본인은 개인정보 보호법 제15조에 의거하여 본인의 개인정보를 제공할 것을 동의합니다.
+    
+    ○ 개인정보의 수집의 목적
+        - 본인 확인절차
+        - 고지사항 전달, 불만 처리 등을 위한 원활한 의사소통 경로의 확보, 채용결과
+        등의 안내
+        - 각종 우편물 발생 시 정확한 배송지의 확보
+        - 채용여부 판단을 위한 기본 정보 확보
+    
+    ○ 개인정보 수집 항목
+        - 성명, 주민등록번호, 사진, 이메일 주소, 전화번호 (휴대폰, 전화번호), 주소, 학력 및 각종 경력 및 자격증 등
+    
+    ○ 개인정보 보유기간
+        - 개인정보 보호법에 의거 법률로 정한 목적 이외의 다른 어떠한 목적으로도 사용되지 않으며 내부 규정에 의해 일정 기간 저장된 후 파기
+    
+    ○ 동의하지 않을 경우의 처리
+        - 이용자는 개인정보 수집 동의에 거부할 수 있으며, 이 경우 채용 절차(사실 확인 등)가 제한됨으로 채용상 불이익을 초래할 수 있습니다.
+                            </textarea><p>
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" id="checkagree">
                                 <label class="custom-control-label" for="checkagree">I agree to sign up for membership.</label>
@@ -70,7 +91,7 @@
 
                         <div class="mb-3">
                             <label for="email">Email</label>
-                            <input type="email" class="form-control" id="email" name="email" placeholder="">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="power@google.com">
                         </div>
                         
                         <div class="mb-3">
@@ -78,20 +99,53 @@
                             <input type="tel" class="form-control" id="telnum" name="telnum" placeholder="">
                         </div>
 
-                    
                         <div class="mb-3">
-                        <label for="country">좋아하는 운동 <small class="text-muted"> 중복선택 가능 </small></label>
-                        <div class="custom-control custom-checkbox">
+                            <label for="exercise">좋아하는 운동 <small class="text-muted"> (중복선택 가능) </small></label>
                             <input type="checkbox" class="custom-control-input" id="exercise">
-                            <label class="custom-control-label" for="exercise">Etc</label>
-
                         </div>
-                   
- 
-                        <br>
-                    </div>
+                        <!--선호운동 체크박스-->
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="a">
+                                        <label class="custom-control-label" for="a">Soccer</label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="b">
+                                        <label class="custom-control-label" for="b">Basketball</label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="c">
+                                        <label class="custom-control-label" for="c">Baseball</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="d">
+                                        <label class="custom-control-label" for="d">Bowling</label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="e">
+                                        <label class="custom-control-label" for="e">Badminton</label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="f">
+                                        <label class="custom-control-label" for="f">Climbing</label>
+                                </div>
+                            </div>
+                        </div>
                         
-                   
+                        
+
+                        <!-- <div>
+                            <ul>
+                                <label><input type="checkbox" id="golf" name="exercise" value="1">golf</label>
+                                <label><input type="checkbox" id="bowling" name="exercise" value="2">bowling</label>
+                                <label><input type="checkbox" id="soccer" name="exercise" value="3">soccer</label>
+                            </ul>
+                        </div> -->
+                    </div>       
+                </div>
                     <hr class="mb-3">
                     <div class="d-block text-center mb-4">
                         <p class="card-text text-muted">Please check the contents again.</p>
