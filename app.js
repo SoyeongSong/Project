@@ -24,6 +24,7 @@ app.use('/', router);
 
 app.use('/study', express.static('study'));
 app.use('/project', express.static('project'));
+app.use('/Healthier', express.static('Healthier'));
 
 
 //Soyeong
