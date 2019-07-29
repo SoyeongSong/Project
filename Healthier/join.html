@@ -35,12 +35,16 @@
                     <div class="col-md-8 order-md-3">
                         <h4 class="mb-3">SIGN UP</h4>
                         <div class="mb-3">
-                            <label for="fullname"> 개인정보동의서</label>
-                            <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Fullname">
+                            <label for="agree"> 개인정보동의서</label>
+                            <input type="text" class="form-control" id="agree" name="agree" placeholder="">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="checkagree">
+                                <label class="custom-control-label" for="checkagree">I agree to sign up for membership.</label>
+                            </div>
                         </div>
 
                         <div class="mb-3">
-                            <label for="fullname"> ID <span class="text-muted"> (계정이름) </span></label>
+                            <label for="fullname"> ID <small class="text-muted"> (계정이름) </small></label>
                             <div class="input-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text">@</span>
@@ -48,57 +52,47 @@
                             <input type="text" class="form-control" id="username" name="username" placeholder="Username">
                             </div>
                         </div>
-
-                        <div class="mb-3">
-                            <label for="email">Email <span class="text-muted">(Optional)</span></label>
-                            <input type="email" class="form-control" id="email" name="email" placeholder="hellofriend@naver.com">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="password1">비밀번호</label>
+                                <input type="password" class="form-control" id="password1" name="password1">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="password2">비밀번호 확인</label>
+                                <input type="password" class="form-control" id="password2" name="password2">
+                            </div>
                         </div>
                     
                         <div class="mb-3">
-                            <label for="phone">Phone</label>
-                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="010-1243-1234">
-                        </div>
-                    
-                        <div class="mb-3">
-                            <label for="address">Address</label>
+                            <label for="address">주소</label>
                             <input type="text" class="form-control" id="address" name="address" placeholder="Address">
                         </div>
 
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                            <label for="country">Country</label>
-                            <select class="custom-select d-block w-100" id="country" name="country">
-                                <option value="">Choose</option>
-                                <option>United States</option>
-                                <option>South Korea</option>
-                                <option>Singapore</option>
-                            </select>
-                            </div>
-
-                            <div class="col-md-6 mb-3">
-                            <label for="gender">Gender</label>
-                            <select class="custom-select d-block w-100" id="gender" name="gender">
-                                <option value="">Choose</option>
-                                <option>Male</option>
-                                <option>Female</option>
-                            </select>
-                            </div>
+                        <div class="mb-3">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="telnum">Phone </label>
+                            <input type="tel" class="form-control" id="telnum" name="telnum" placeholder="">
                         </div>
 
-                        <br>
+                    
+                        <div class="mb-3">
+                        <label for="country">좋아하는 운동 <small class="text-muted"> 중복선택 가능 </small></label>
                         <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="same-address">
-                            <label class="custom-control-label" for="same-address">We have checked the membership terms and conditions.</label>
+                            <input type="checkbox" class="custom-control-input" id="exercise">
+                            <label class="custom-control-label" for="exercise">Etc</label>
+
                         </div>
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="save-info">
-                            <label class="custom-control-label" for="save-info">I agree to sign up for membership.</label>
-                        </div>
+                   
+ 
                         <br>
                     </div>
                         
-                    </div>
-                    <hr class="mb-4">
+                   
+                    <hr class="mb-3">
                     <div class="d-block text-center mb-4">
                         <p class="card-text text-muted">Please check the contents again.</p>
                         <button type="submit" class="btn btn-md btn-primary px-5 font-weight-bold">Done</button>                           
