@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    
+</head>
+
+<body>
+
+    <script type="text/javascript">
+        $(document).ready(function() { 
+            /* 전체 상태 반전 */
+            $('#btnAllcheck').click(function() {
+                $('input:checkbox[name="chkboxAll"]').each(function() {
+                    $(this).prop('checked', !$(this).prop('checked'));
+                    $(this).trigger('change');
+                });
+            });
+            $("#btnset1").click(function() {
+                $('#sentence1').empty();
+                });
+
+            $("#btnset2").click(function() {
+                $('#sentence2').show($('#sentence1').html());
+                });
+            $("#btnset3").click(function() {
+                $("#sentence2").append($('#sentence1').html());
+            });
+
+            $("#getName").click(function() {
+                $("#get1").text("Name : " + $("#name").text());
+            });
+            $("#getComment").click(function() {
+                $("#get2").text("Comment : " + $("#comment").text());
+            });
+            $("#getCity").click(function() {
+                $("#get3").text("City : " + $("#city").text());
+            });
+            $("#getAll").click(function() {
+                $("#get4").text("All : " + $("#all").text());
+            });
+        });
+
+        
+    </script>
+
+
+
+
+    <div class="contiainer m-5 p-3 border" style="width:500px; height:350px">
+        <form action="">
+            <table>
+                <tr>
+                    <th>Name: </th>
+                    <td>
+                        <input type="text" id="name" value="Soyeong Song" />
+                    </td>
+                </tr>
+                <tr>
+                    <th>Comment: </th>
+                    <td>
+                        <input type="text" size="50" height="10" id="comment" value="Hello, World!" />
+                        <!-- <textarea cols="50" rows="5" id="comment">Hello, World!</textarea> -->
+                    </td>
+                </tr>
+                <tr>
+                    <th>City: </th>
+                    <td>
+                        <select id="city">
+                            <option id="paris">Paris</option>
+                            <option id="london">London</option>
+                            <option id="newyork">NewYork</option>
+                            <option id="seoul">Seoul</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>                
+        </form>
+        <p><b>Note: </b>Fill the above form and click the follwing button to get the value. </p>
+
+        <input type="button" id="getName" name="get" value="get Name">
+        <input type="button" id="getComment" name="get" value="get Comment">
+        <input type="button" id="getCity" name="get" value="get City">
+        <input type="button" id="getAll" name="get" value="get All">
+        
+        <div id="get">
+            <p id="get01">Name</p>
+            <p id="get02">Comment</p>
+            <p id="get03">City</p>
+            <p id="get04">All</p>
+        </div>
+    </div>
+
+    <form action="">
+        <div class="contiainer m-5 p-3 border" style="width:500px; height:200px">
+            <input type="button" id="btnset1" name="sentence" value="Discovery">
+            <input type="button" id="btnset2" name="sentence" value="Atlantis">
+            <input type="button" id="btnset3" name="sentence" value="Endeavour">
+            <p id="sentence1"><b>Note : </b> Click the above buttons to set the value of following input box.</p>
+            <p id="sentence2"><b>Note : </b> Click the above buttons to set the value of following input box.</p>
+        </div>
+    </form>
+    <form action="" onsummit="">
+        <div class="contiainer m-5 p-3 border" style="width:500px; height:200px">
+            <input type="checkbox" id="chkbox1" name="chkboxAll" value="Arduino"><label for="chkbox1">Arduino</label><br>
+            <input type="checkbox" id="chkbox2" name="chkboxAll" value="Android"><label for="chkbox2">Android</label><br>
+            <input type="checkbox" id="chkbox3" name="chkboxAll" value="AI"><label for="chkbox3">AI</label><br>
+            <input type="checkbox" id="chkbox4" name="chkboxAll" value="BigData"><label for="chkbox4">BigData</label><br>
+            <input type="button" id="btnAllcheck" name="chkboxAll" value="All Check Toggle">
+        </div>
+    </form>
+        
+</body>
+</html>

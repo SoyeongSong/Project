@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    
+</head>
+
+<body>
+    <!-- <script>
+
+    $(function(){
+        $("#btn1").click(function(){ alert("Text: " + $("#test").text()); });
+        $("#btn2").click(function(){ alert("HTML: " + $("#test").html()); });
+        $("#btn3").click(function(){ alert("Value: " + $("#test01").val()); });
+        $("#lab").click(function(){
+            alert("Attribute: " + $("#yojulab").attr("href"));
+         });
+    });
+</script>
+    <div class="container">
+
+   <p id="test">This is some <b>bold</b> text in a paragraph.</p>
+   <button id="btn1">Show Text</button>
+   <button id="btn2">Show HTML</button>
+   <p>Name: <input type="text" id="test01" value="Mickey Mouse"></p>
+   <button id="btn3">Show Values</button>
+   <p><a href="https://www.yojulab.com" id="yojulab">yojulab.com</a></p>
+
+   <p> result: <input type="text" id="result" readonly> </p>
+   </div>
+    -->
+
+
+
+
+    <!-- <script>
+    $(function(){
+    $("#btn1").click(function(){ $("#test1").text("Hello world!");});
+    $("#btn2").click(function(){ $("#test2").html("<b>Hello world!</b>"); });
+    $("#btn3").click(function(){ $("#test3").val("Dolly Duck"); });
+    });
+    </script>
+
+        <p id="test1">This is a paragraph.</p>
+        <p id="test2">This is another paragraph.</p>
+        <p>Input field: <input type="text" id="test3" value="Mickey Mouse"></p>
+        <button id="btn1">Set Text</button>
+        <button id="btn2">Set HTML</button>
+        <button id="btn3">Set Value</button>
+        <input type="button" value="Reset" class="btn-primary"onclick="location.reload();"> 
+        //페이지 새로고침 -->
+
+
+
+    <!-- <script>
+        $(function(){
+            $("button").click(function(){
+                $("#move").attr({
+                    "href" : "www.naver.com", "title" : "Mainpage"
+                });
+            });
+            $("#button1").click(function(){
+                $("p").remove();
+            });
+        });
+    </script>
+
+    <p><a href="www.google.com" title="some" id="move">google.com</a></p>
+    <button>Change href and title</button>
+    <button id="button1">Remove div element</button> -->
+
+    <script>
+        $(function(){
+        $("#btn1").click(function(){ $("p").append(" <b>Appended text</b>.");});
+        });
+     </script>
+    <p>This is another paragraph.</p>
+    <button id="btn1">Append text</button>
+
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html> 
+<html> 
+   <head> 
+       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> 
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> 
+       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+   </head> 
+   <body> 
+        <script> 
+            function validateform() { 
+                var check = true; //????
+                var first = document.myform.first.value; 
+                var last = document.myform.last.value; 
+                var name = document.myform.name.value; 
+                var city = document.myform.city.value; 
+                var state = document.myform.state.value; 
+                var zip = document.myform.zip.value; 
+ 
+ 
+                document.getElementById("demo01").innerHTML = ""; 
+                document.getElementById("demo02").innerHTML = ""; 
+                document.getElementById("demo03").innerHTML = ""; 
+                document.getElementById("demo04").innerHTML = ""; 
+                document.getElementById("demo05").innerHTML = ""; 
+                document.getElementById("demo06").innerHTML = ""; 
+ 
+                if (first == null || first == "") { 
+                    var strvalidation = "First name can't be blank"; 
+                    document.getElementById("demo01").innerHTML = strvalidation; 
+                    document.myform.first.classList.remove("is-valid"); 
+                    document.myform.first.classList.add("is-invalid"); 
+                     
+                    check = false; 
+                }else{ 
+                    var strvalidation = "Looks good!"; 
+                    document.getElementById("demo01").innerHTML = strvalidation; 
+                    document.myform.first.classList.remove("is-invalid"); 
+                    document.myform.first.classList.add("is-valid"); 
+                } 
+ 
+ 
+                if (last == null || last == "") { 
+                    var strvalidation = "last name can't be blank"; 
+                    document.getElementById("demo02").innerHTML = strvalidation; 
+                    document.myform.last.classList.remove("is-valid"); 
+                    document.myform.last.classList.add("is-invalid"); 
+                     
+                    check = false; 
+                }else{ 
+                    var strvalidation = "Looks good!"; 
+                    document.getElementById("demo02").innerHTML = strvalidation; 
+                    document.myform.last.classList.remove("is-invalid"); 
+                    document.myform.last.classList.add("is-valid"); 
+                } 
+ 
+ 
+                if (name == null || name == "") { 
+                    var strvalidation = "Username can't be blank"; 
+                    document.getElementById("demo03").innerHTML = strvalidation; 
+                    document.myform.name.classList.remove("is-valid"); 
+                    document.myform.name.classList.add("is-invalid"); 
+                     
+                    check = false; 
+                }else{ 
+                    var strvalidation = "Looks good!"; 
+                    document.getElementById("demo03").innerHTML = strvalidation; 
+                    document.myform.name.classList.remove("is-invalid"); 
+                    document.myform.name.classList.add("is-valid"); 
+                } 
+ 
+ 
+                if (city == null || city == "") { 
+                    var strvalidation = "City can't be blank"; 
+                    document.getElementById("demo04").innerHTML = strvalidation; 
+                    document.myform.city.classList.remove("is-valid"); 
+                    document.myform.city.classList.add("is-invalid"); 
+                     
+                    check = false; 
+                }else{ 
+                    var strvalidation = "Looks good!"; 
+                    document.getElementById("demo04").innerHTML = strvalidation; 
+                    document.myform.city.classList.remove("is-invalid"); 
+                    document.myform.city.classList.add("is-valid"); 
+                } 
+ 
+ 
+                if (state == null || state == "") { 
+                    var strvalidation = "State can't be blank"; 
+                    document.getElementById("demo05").innerHTML = strvalidation; 
+                   document.myform.state.classList.remove("is-valid"); 
+                    document.myform.state.classList.add("is-invalid"); 
+                     
+                    check = false; 
+                }else{ 
+                    var strvalidation = "Looks good!"; 
+                    document.getElementById("demo05").innerHTML = strvalidation; 
+                    document.myform.state.classList.remove("is-invalid"); 
+                    document.myform.state.classList.add("is-valid"); 
+                 } 
+  
+  
+                 if (zip == null || zip == "") { 
+                     var strvalidation = "Zip can't be blank"; 
+                     document.getElementById("demo06").innerHTML = strvalidation; 
+                     document.myform.zip.classList.remove("is-valid"); 
+                     document.myform.zip.classList.add("is-invalid"); 
+                      
+                     check = false; 
+                 }else{ 
+                     var strvalidation = "Looks good!"; 
+                     document.getElementById("demo06").innerHTML = strvalidation; 
+                     document.myform.zip.classList.remove("is-invalid"); 
+                     document.myform.zip.classList.add("is-valid"); 
+                 } 
+  
+  
+                 return check; 
+             } 
+              
+             //대분류 중분류 
+             function change1(){ 
+                 var arr1=['one','two','three']; 
+                 var arr2=[0,1,2,3]; 
+                 var put; 
+  
+                 var select = document.getElementById("select"); 
+                 var select2 = document.getElementById("select2"); 
+                  
+                 var selectText = select.options[select.selectedIndex].value; 
+                  
+                 if(selectText =='1'){ 
+                     put=arr1; 
+                 }else if(selectText =='2'){ 
+                     put=arr2; 
+                 } 
+  
+                 //reset select 
+                 for(i=select2.length; i>=0; i--){ 
+                     select2.options[i]=null; 
+                 }
+                 
+                 //add select 
+                 for (i of put) {  
+                     var objOption = document.createElement("option");         
+                     objOption.text = i; 
+                      
+                     select2.options.add(objOption); 
+                 } 
+                  
+            } 
+               
+         </script> 
+         <div class="container m-5"> 
+             대분류: 
+                 <select class="custom-select col-3" name="sel" id="select" onchange="change1()"> 
+                     <option selected>...choose</option> 
+                     <option value="1">word</option> 
+                     <option value="2">number</option> 
+                 </select> 
+                 중분류: 
+                 <select class="custom-select col-3" name="sel2" id="select2" > 
+                 </select> 
+         </div> 
+ 
+
+ 
+
+         <form name="myform" action="/login" onsubmit="return validateform()"> 
+             <div class="form-row"> 
+                 <div class="col-md-4 mb-3"> 
+                     <label for="validationServer01">First name</label> 
+                     <input type="text" class="form-control" name="first"> 
+                     <div class="" id="demo01"> 
+                          
+                     </div> 
+                 </div> 
+                 <div class="col-md-4 mb-3"> 
+                     <label for="validationServer02">Last name</label> 
+                     <input type="text" class="form-control" name="last"> 
+                     <div class="" id="demo02"> 
+                          
+                     </div> 
+                 </div> 
+ 
+
+                 <div class="col-md-4 mb-3"> 
+                         <label for="validationServerUsername">s</label> 
+                     <input type="text" class="form-control" name="name" placeholder="Username"> 
+                     <div class="" id="demo03"> 
+                          
+                     </div> 
+                 </div> 
+             </div> 
+             <div class="form-row"> 
+                 <div class="col-md-6 mb-3"> 
+                     <label for="validationServer03">City</label> 
+                     <input type="text" class="form-control" name="city" placeholder="City"> 
+                     <div class="" id="demo04"> 
+                      
+                     </div> 
+                 </div> 
+                 <div class="col-md-3 mb-3"> 
+                     <label for="validationServer04">State</label> 
+                     <input type="text" class="form-control" name="state" placeholder="State"> 
+                     <div class="" id="demo05"> 
+                     </div> 
+                 </div> 
+                 <div class="col-md-3 mb-3"> 
+                     <label for="validationServer05">Zip</label> 
+                     <input type="text" class="form-control " name="zip" placeholder="Zip"> 
+                     <div class="" id="demo06"> 
+                     </div> 
+                 </div> 
+             </div> 
+ 
+
+              
+             <button class="btn btn-primary" type="submit" value="register">Submit form</button> 
+         </form>    
+          
+     </body> 
+ </html> 
