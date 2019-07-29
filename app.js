@@ -7,7 +7,7 @@ app.use(express.static('public'));
 const path = require('path');
 const router = express.Router();
 router.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname + '/main.html'));
+    res.sendFile(path.join(__dirname + '/Main_page.html'));
     //__dirname : It will resolve to your project folder.
 });
 
