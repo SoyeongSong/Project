@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
@@ -30,13 +30,13 @@
             </div>
 
 
-            <form action="/join" method="GET" onsubmit="return joinCheck(this)">
+            <form action="/join" method="GET" onsubmit="return joinChk(this)">
 
                 <div class="row justify-content-center">
                     <div class="col-md-8 order-md-3">
                         <h4 class="mb-3">SIGN UP</h4>
                         <div class="mb-3">
-                            <label for="agree"> 개인정보동의서</label>
+                            <label for="agree"> 개인정보 동의서</label>
                             <textarea class="form-control" id="agree" name="agree" name="agree" rows="10" cols="100">
     개인정보 제공 및 활용 동의서
 
@@ -60,7 +60,7 @@
                             </textarea><p>
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" id="checkagree">
-                                <label class="custom-control-label" for="checkagree">I agree to sign up for membership.</label>
+                                <label class="custom-control-label" for="checkagree">개인정보 활용에 동의합니다</label>
                             </div>
                         </div>
 
@@ -135,15 +135,6 @@
                             </div>
                         </div>
                         
-                        
-
-                        <!-- <div>
-                            <ul>
-                                <label><input type="checkbox" id="golf" name="exercise" value="1">golf</label>
-                                <label><input type="checkbox" id="bowling" name="exercise" value="2">bowling</label>
-                                <label><input type="checkbox" id="soccer" name="exercise" value="3">soccer</label>
-                            </ul>
-                        </div> -->
                     </div>       
                 </div>
                     <hr class="mb-3">
