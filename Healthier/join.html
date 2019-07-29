@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <title>회원가입</title>
+</head>
+
+
+<body class="bg-light">
+  
+    <!-- BODY TEXT -->
+          
+        
+        <div class="container">
+            <div class="py-5 text-center">
+            <img class="d-block mx-auto rounded-pill mb-4" src="./Image/user.jpg" alt="" width="100" height="100">
+            <h2 class="m-3">환영합니다!</h2>
+            <p class="lead">You are always welcome to sign up for membership! <br>가입하셔서 많은 혜택을 누리세요!</p>
+            </div>
+
+
+            <form action="/join" method="GET" onsubmit="return joinChk(this)">
+
+                <div class="row justify-content-center">
+                    <div class="col-md-8 order-md-3">
+                        <h4 class="mb-3">SIGN UP</h4>
+                        <div class="mb-3">
+                            <label for="agree"> 개인정보 동의서</label>
+                            <textarea class="form-control" id="agree" name="agree" name="agree" rows="10" cols="100">
+    개인정보 제공 및 활용 동의서
+
+    본인은 개인정보 보호법 제15조에 의거하여 본인의 개인정보를 제공할 것을 동의합니다.
+    
+    ○ 개인정보의 수집의 목적
+        - 본인 확인절차
+        - 고지사항 전달, 불만 처리 등을 위한 원활한 의사소통 경로의 확보, 채용결과
+        등의 안내
+        - 각종 우편물 발생 시 정확한 배송지의 확보
+        - 채용여부 판단을 위한 기본 정보 확보
+    
+    ○ 개인정보 수집 항목
+        - 성명, 주민등록번호, 사진, 이메일 주소, 전화번호 (휴대폰, 전화번호), 주소, 학력 및 각종 경력 및 자격증 등
+    
+    ○ 개인정보 보유기간
+        - 개인정보 보호법에 의거 법률로 정한 목적 이외의 다른 어떠한 목적으로도 사용되지 않으며 내부 규정에 의해 일정 기간 저장된 후 파기
+    
+    ○ 동의하지 않을 경우의 처리
+        - 이용자는 개인정보 수집 동의에 거부할 수 있으며, 이 경우 채용 절차(사실 확인 등)가 제한됨으로 채용상 불이익을 초래할 수 있습니다.
+                            </textarea><p>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="checkagree">
+                                <label class="custom-control-label" for="checkagree">개인정보 활용에 동의합니다</label>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="fullname"> ID <small class="text-muted"> (계정이름) </small></label>
+                            <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">@</span>
+                            </div>
+                            <input type="text" class="form-control" id="username" name="username" placeholder="Username">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="password1">비밀번호</label>
+                                <input type="password" class="form-control" id="password1" name="password1">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="password2">비밀번호 확인</label>
+                                <input type="password" class="form-control" id="password2" name="password2">
+                            </div>
+                        </div>
+                    
+                        <div class="mb-3">
+                            <label for="address">주소</label>
+                            <input type="text" class="form-control" id="address" name="address" placeholder="Address">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="power@google.com">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="telnum">Phone </label>
+                            <input type="tel" class="form-control" id="telnum" name="telnum" placeholder="">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="exercise">좋아하는 운동 <small class="text-muted"> (중복선택 가능) </small></label>
+                            <input type="checkbox" class="custom-control-input" id="exercise">
+                        </div>
+                        <!--선호운동 체크박스-->
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="a">
+                                        <label class="custom-control-label" for="a">Soccer</label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="b">
+                                        <label class="custom-control-label" for="b">Basketball</label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="c">
+                                        <label class="custom-control-label" for="c">Baseball</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="d">
+                                        <label class="custom-control-label" for="d">Bowling</label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="e">
+                                        <label class="custom-control-label" for="e">Badminton</label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="f">
+                                        <label class="custom-control-label" for="f">Climbing</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>       
+                </div>
+                    <hr class="mb-3">
+                    <div class="d-block text-center mb-4">
+                        <p class="card-text text-muted">Please check the contents again.</p>
+                        <button type="submit" class="btn btn-md btn-primary px-5 font-weight-bold">Done</button>                           
+                    </div>         
+                </div>
+            </form>
+        </div>                                   
+    </div>
+
+
+    <!--FOOTER-->
+    <footer class="container">
+            <hr class="featurette-divider">
+            <p class="text-center text-secondary">회사 이름 및 안내 넣기</p>
+    </footer>
+
+    </body>
+</html>
