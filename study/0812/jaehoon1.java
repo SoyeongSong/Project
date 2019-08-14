@@ -4,7 +4,7 @@ import java.util.Set;
 import java.util.Map;
 import java.util.Map.Entry;
 
-public class jaehoon {
+public class jaehoon1 {
     public static void main(String[] args) {
         HashMap<Integer, String> hmap = new HashMap<Integer, String>();
         hmap.put(12, "Chaitanya");
